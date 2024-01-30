@@ -56,3 +56,12 @@ content-type: application/json
 "nmae":"ccccccc",
 "Mobile":5555
 }]
+
+### Login
+POST http://localhost:7016/src/ksSample/Login
+content-type: application/json
+
+{
+"UserName":"SREENIVAS",
+"Password":"8341177771"
+}

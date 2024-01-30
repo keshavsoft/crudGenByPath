@@ -6,8 +6,6 @@ let StartFunc = async ({ LocalBodyAsModal }) => {
     try {
         const LocalTableData = await StartFuncInitializeSequelizeWithTableName();
 
-        // const users = await LocalTableData.findOne({ where: { id: inId } });
-
         const result = await LocalTableData.findOne({
             where: {
                 UserName: localUserName,
