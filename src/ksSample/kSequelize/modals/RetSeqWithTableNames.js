@@ -1,7 +1,6 @@
 import { DataTypes } from "sequelize";
 import Configjson from '../../../Config.json' assert { type: 'json' };
 import tableNameJson from '../../tableName.json' assert { type: 'json' };
-// import { StartFunc as StartFuncInitializeSequelize } from "./initializeSequelize.js";
 
 import { StartFunc as StartFuncInitializeSequelize } from "../../../kSequelize/initializeSequelize.js";
 

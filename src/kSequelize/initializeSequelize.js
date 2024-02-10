@@ -3,11 +3,24 @@ import Configjson from '../Config.json' assert { type: 'json' };
 
 let commonJonPth = Configjson.JsonPath;
 let commonDbName = Configjson.DbName;
+let CommonsequelizeConfig = Configjson.sequelizeConfig;
 
 let StartFunc = async () => {
     let sequelize;
 
     try {
+        if (CommonsequelizeConfig.isMysql) {
+            sequelize = new Sequelize(Configjson.sequelizeConfig.DbName,
+                'root',
+                'Keshav@12345',
+                {
+                    host: 'localhost',
+                    dialect: 'mysql'
+                });
+
+            return await sequelize;
+        };
+
         sequelize = new Sequelize({
             dialect: 'sqlite',
             logging: false,

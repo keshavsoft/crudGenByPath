@@ -8,6 +8,8 @@
     "DbName": "sample.db",
     "isSequelize": true,
     "sequelizeConfig": {
+        "isMysql": true,
+        "DbName": "sample",
         "tableAndColumns": [
             {
                 "tableName": "ksSample",
@@ -18,9 +20,8 @@
                         "unique": true
                     },
                     "Mobile": {
-                        "type": "NUMBER",
-                        "allowNull": true,
-                        "defaultValue": 9848163021
+                        "type": "INTEGER",
+                        "allowNull": true
                     },
                     "City": {
                         "type": "STRING",
