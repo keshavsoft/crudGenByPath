@@ -10,13 +10,5 @@ router.get('/', async (req, res) => {
     res.json(LocalTablesArray);
 });
 
-router.get('/asArray', async (req, res) => {
-    let LocalTablesArray = await StartFuncTableNames();
-
-    let LocalReturnArray = LocalTablesArray.map((element) => element.name);
-
-    res.json(LocalReturnArray);
-});
-
 export { router };
 
