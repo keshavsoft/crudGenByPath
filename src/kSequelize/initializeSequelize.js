@@ -1,5 +1,7 @@
 import { Sequelize } from "sequelize";
 import Configjson from '../Config.json' assert { type: 'json' };
+// import dotenv from 'dotenv';
+// dotenv.config();
 
 let commonJonPth = Configjson.JsonPath;
 let commonDbName = Configjson.DbName;
@@ -11,7 +13,7 @@ let StartFunc = async () => {
     try {
         if (CommonsequelizeConfig.isMysql) {
             if ("KS_PASSWORD_FORMYSQL" in process.env === false) {
-                console.log("KS_SECRET_FORLOGIN not found in .env file");
+                console.log("KS_PASSWORD_FORMYSQL not found in .env file");
                 return await false;
             };
 

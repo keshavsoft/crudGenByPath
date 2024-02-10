@@ -6,14 +6,16 @@ let StartFunc = async () => {
     jVarLocalMainId.querySelector(".row").innerHTML = "";
 
     let jVarLocalFilesArray = await LocalFetchFiles();
+    // let jVarLocalTableNamesArray=jVarLocalFilesArray.map(element => {
+    //     return 
+    // });
+
 
     let jVarLocalFilesHtml = jVarLocalFilesArray.map(element => {
         const clone = jVarLocalHtmlId.content.cloneNode(true);
         let jVarLocalCardTitleId = clone.getElementById("CardTitleId");
         jVarLocalCardTitleId.innerHTML = element.name;
 
-        // clone.querySelector("a").href += `?fileName=${element}`;
-        // clone.querySelector("a").href += `/JsonUi/${element.name}/Menu.html`;
         clone.querySelector("a").href += `./${element.name}/Menu.html`;
 
         return clone;
