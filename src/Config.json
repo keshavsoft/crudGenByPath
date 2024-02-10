@@ -6,9 +6,9 @@
         "DbName": "data.db"
     },
     "DbName": "sample.db",
-    "isSequelize": true,
+    "isSequelize": false,
     "sequelizeConfig": {
-        "isMysql": true,
+        "isMysql": false,
         "DbName": "sample",
         "tableAndColumns": [
             {

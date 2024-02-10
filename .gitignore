@@ -5,4 +5,6 @@ bin/
 public/JsonUi
 public/JsonCRUD/Custom
 
+KData/
+
 .env

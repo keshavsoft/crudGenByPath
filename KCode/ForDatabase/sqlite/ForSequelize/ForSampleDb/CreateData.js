@@ -1,14 +1,21 @@
 // import { StartFunc as StartFuncInitializeSequelize } from "../../../src/ksSample/kSequelize/modals/RetSeqWithTableNames.js";
 // import { StartFunc as StartFuncInitializeSequelize } from "../../../../../src/ksSample/kSequelize/modals/RetSeqWithTableNames.js";
-import { DataTypes } from "sequelize";
+
+import { Sequelize, DataTypes } from "sequelize";
 import Configjson from '../../../../../src/Config.json' assert { type: 'json' };
 import tableNameJson from '../../../../../src/ksSample/tableName.json' assert { type: 'json' };
+import dotenv from 'dotenv';
+dotenv.config();
+
+let commonJonPth = Configjson.JsonPath;
+let commonDbName = Configjson.DbName;
+let CommonsequelizeConfig = Configjson.sequelizeConfig;
 
 let StartFunc = async () => {
     const sequelize = await LocalFuncForTableNames();
 
     sequelize.sync({ force: true });
-    
+
 };
 
 let LocalFuncForTableNames = async () => {
@@ -68,4 +75,5 @@ let LocalFuncFotInitiallize = async () => {
 
     return await sequelize;
 };
+
 StartFunc();

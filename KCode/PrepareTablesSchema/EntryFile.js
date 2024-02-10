@@ -4,7 +4,7 @@ import path from "path";
 let CommonFromFolderName = "FromTableColumns";
 import ConfigJson from '../../src/Config.json' assert {type: 'json'};
 
-let StartFunc = ({ inDataPk }) => {
+let StartFunc = () => {
     let LocalDataPk = ConfigJson.ToDataDetails.DataPk;
 
     let CommonFiles = fs.readdirSync(`${CommonFromFolderName}/${LocalDataPk}`);
