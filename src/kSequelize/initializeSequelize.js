@@ -10,9 +10,14 @@ let StartFunc = async () => {
 
     try {
         if (CommonsequelizeConfig.isMysql) {
+            if ("KS_PASSWORD_FORMYSQL" in process.env === false) {
+                console.log("KS_SECRET_FORLOGIN not found in .env file");
+                return await false;
+            };
+
             sequelize = new Sequelize(Configjson.sequelizeConfig.DbName,
                 'root',
-                'Keshav@12345',
+                process.env.KS_PASSWORD_FORMYSQL,
                 {
                     host: 'localhost',
                     dialect: 'mysql'
