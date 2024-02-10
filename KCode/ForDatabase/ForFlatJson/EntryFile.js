@@ -1,7 +1,7 @@
 import fs from "fs-extra";
 import ConfigJson from '../../../src/Config.json' assert {type: 'json'};
 
-let StartFunc = ({ inTablesCollection, inDataPk }) => {
+let StartFunc = ({ inTablesCollection }) => {
     let LocalTablesCollection = inTablesCollection;
     let LocalDataLocation = `${ConfigJson.ToDataDetails.DataPath}/${ConfigJson.ToDataDetails.DataPk}`;
 
