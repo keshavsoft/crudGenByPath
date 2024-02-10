@@ -1,0 +1,11 @@
+{
+    "Name": {
+        "type": "STRING",
+        "allowNull": false
+    },
+    "Mobile": {
+        "type": "NUMBER",
+        "allowNull": false,
+        "defaultValue": 316
+    }
+}

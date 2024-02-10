@@ -1,0 +1,30 @@
+[
+    {
+        "tableName": "Customers",
+        "tableColumns": {
+            "Name": {
+                "type": "STRING",
+                "allowNull": false
+            },
+            "Mobile": {
+                "type": "NUMBER",
+                "allowNull": false,
+                "defaultValue": 316
+            }
+        }
+    },
+    {
+        "tableName": "Tickets",
+        "tableColumns": {
+            "Name": {
+                "type": "STRING",
+                "allowNull": false
+            },
+            "TicketNumber": {
+                "type": "NUMBER",
+                "allowNull": false,
+                "defaultValue": 316
+            }
+        }
+    }
+]
