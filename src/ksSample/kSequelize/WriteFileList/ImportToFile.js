@@ -9,9 +9,14 @@ let StartFunc = async ({ inDataToInsert }) => {
         };
     };
 
-    const LocalFromBuild = await LocalTableData.bulkCreate(inDataToInsert);
+    try {
+        const LocalFromBuild = await LocalTableData.bulkCreate(inDataToInsert);
 
-    return await LocalFromBuild;
+        return await LocalFromBuild;
+    } catch (error) {
+        return await { KTF: false, KReason: error, ErrorFrom: process.cwd() };
+        // return await error;
+    };
 };
 
 export { StartFunc };
